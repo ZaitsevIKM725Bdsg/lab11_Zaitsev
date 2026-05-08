@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b, c;
+    cin >> a >> b >> c;
+
+    double *pa = &a;
+    double *pb = &b;
+    double *pc = &c;
+
+    *pc *= 3;
+
+    double temp = *pa;
+    *pa = *pc;
+    *pc = temp;
+
+    cout << a << " " << b << " " << c;
+    return 0;
+}
